@@ -1,0 +1,370 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: #080808;
+    color:#fff;
+}
+#encabezado{
+    width:100%;
+    height:100vh;
+    background-image: url(./img/encabezado-cuatro.jpg);
+    background-size:cover;
+    background-position: center;
+}
+.contenedor{
+    padding:10px 10%;
+}
+nav{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo{
+    width:140px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin:10px 20px;
+}
+nav ul li a{
+    color:#fff;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+}
+
+nav ul li a::after{
+    content:'';
+    width:0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left:0;
+    bottom:-6px;
+    transition:0.5s;
+}
+
+nav ul li a:hover::after{
+    width:100%;
+}
+
+
+.texto-encabezado{
+    margin-top:15%;
+    font-size: 40px;
+}
+.texto-encabezado h1{
+    font-size: 50px;
+    margin-top: 15px;
+}
+.texto-encabezado h1 span{
+    color:#ff004f;
+}
+/* SOBRE MI */
+#sobremi{
+    padding :80px 0;
+    color: #ababab;
+}
+.fila{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.columna-1{
+    flex-basis:35%;
+}
+.columna-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.columna-2{
+    flex-basis:55%;
+}
+.subtitulo{
+    font-size: 40px;
+    font-weight: 600;
+    color:white;
+}
+.barra-links{
+    display: flex;
+    margin:20px 0 40px;
+}
+.link{
+    margin-right:40px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor:pointer;
+    position: relative;
+}
+.link::after{
+    content:'';
+    width:0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left:0;
+    bottom:-8px;
+    transition:0.5s;
+}
+.link.activar-link::after{
+    width:50%;
+}
+.barra-contenido ul li{
+    list-style: none;
+    margin:10px 0;
+
+}
+.barra-contenido ul li span{
+    color:#ff004f;
+    font-size: 15px;
+}
+.barra-contenido{
+    display: none;
+}
+.barra-contenido.activar-barra{
+    display: block;
+}
+/*--------- servicios -----------*/
+#servicios{
+    padding:30 0;
+}
+.lista-de-servicios{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap:40px;
+    margin-top:40px;
+}
+.lista-de-servicios div{
+    background: #262626;
+    padding:40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition:background 0.5s,transform 0.5s;
+}
+.lista-de-servicios div i{
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+.lista-de-servicios div h3{
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom:15px;
+}
+.lista-de-servicios div a{
+    text-decoration: none;
+    color:#fff;
+    font-size: 15px;
+    margin-top: 20px;
+    display: inline-block;
+
+}
+.lista-de-servicios div:hover{
+    background-color: #ff004f;
+    transform:translateY(-10px);
+}
+/* MIS TRABAJOS*/
+#trabajos{
+    padding:45px 0;
+}
+.lista-de-trabajos{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap:50px;
+    margin-top:40px;
+}
+.trabajo{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.trabajo img{
+    width:100%;
+    border-radius: 10px;
+    display:block;
+    transition: transform 0.5s;
+}
+.info{
+    width:100%;
+    height:0%;
+    background: linear-gradient(rgba(0,0,0,0.6),#ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left:0;
+    bottom:0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding:0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+.info h3{
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.trabajo:hover img{
+    transform:scale(1.1);
+}
+.trabajo:hover .info{
+    height: 40%;
+}
+
+/* -------- CONTACTO-------*/
+.contacto-izq{
+    flex-basis: 35%;
+}
+.contacto-der{
+    flex-basis:60%;
+}
+.contacto-izq p{
+    margin-top:20px;
+}
+.contacto-izq p i {
+    color:#ff004f;
+    margin-right:15px;
+    font-size: 20px;
+}
+.iconos{
+    margin-top: 30px;
+}
+.iconos a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color:#ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.iconos a:hover{
+    color:#ff004f;
+    transform:translateY(-5px);
+}
+.boton{
+    display: inline-block;
+    margin:50px auto;
+    background: #ff004f;
+    width:fit-content;
+    border: 1px solid #ff004f;
+    padding:14px 50px;
+    border-radius: 5px;
+    text-decoration: none;
+    color:#ffF;
+    transition:background 0.5s;
+}
+.boton:hover{
+    background: #ff004f;
+}
+.contact-der form{
+    width:100%;
+
+}
+form input,form textarea{
+    width:100%;
+    border:0;
+    outline:none;
+    background: #262626;
+    padding:15px 0;
+    margin:15px 0;
+    color:#fff;
+    font-size: 17px;
+    border-radius: 5px;
+
+}
+form .enviar{
+    padding: 15px 60px;
+    font-size: 17px;
+    margin-top:20px;
+    cursor:pointer;
+}
+nav .fa-circle-xmark,nav .fa-bars{
+    display: none;
+}
+/*----------MEDIA CSS--------------*/
+@media(min-width: 601px) and (max-width: 992px){
+    .logo{
+        display: none;
+    }
+    nav ul li{
+        font-size: 20px;
+        margin:10px 10px;
+    }
+}
+@media only screen and (max-width: 600px){
+    .logo{
+        width:25%;
+        
+    }
+    #encabezado{
+        background-image: url(./img/encabezado-mobilee.jpg);
+        background-size: cover;
+    }
+    .texto-encabezado{
+        margin-top:90%;
+        font-size: 15px;
+    }
+    .texto-encabezado h1{
+        font-size: 25px;
+    }
+    nav .fa-circle-xmark,nav .fa-bars{
+        display: block;
+        font-size: 23px;
+    }
+    nav ul{
+        background: #ff004f;
+        position:fixed;
+        top:0;
+        right:-200px;
+        width:200px;
+        height:100vh;
+        padding-top:50px;
+        z-index:2;
+        transition:right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin:25px;
+    }
+    nav ul .fa-circle-xmark,nav ul .fa-bars {
+        display: block;
+        position: absolute;
+        top:25px;
+        left:25px;
+        cursor:pointer;
+    }
+
+    /* SOBRE MI*/
+    .subtitulo{
+        font-size: 30px;
+    }
+    .columna-1,.columna-2{
+        flex-basis: 100%;
+    }
+    .columna-1{
+        margin-bottom:30px;
+    }
+    .columna-2 p{
+        font-size: 15px;
+        font-weight: 300;
+    }
+    .barra-links p{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    /*CONTACTO*/
+    .contacto-izq,.contacto-der{
+        flex-basis: 100%;
+    }
+}
